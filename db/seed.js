@@ -4,7 +4,8 @@ async function dropTables(){ //this is gonna call a query which drops all tables
     try {
         console.log("Starting to drop tables...");
         
-        await client.query(`DROP TABLE IF EXISTS users`); 
+        await client.query(`DROP TABLE IF EXISTS users;
+            DROP TABLE IF EXISTS posts;`); 
 
         console.log("Finished dropping tables!")
     } catch (error) {
